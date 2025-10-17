@@ -1,0 +1,68 @@
+Relationships example:
+
+For GraphQL Semantics:
+
+In the Body of a GET request:
+
+
+
+
+// Example 2 (projections) for a deep query
+// projection on Employee objects.
+
+{
+    "operationDetails": [
+        {
+            "opType": "projections",
+            "projectionsDetails": [
+                {
+                    "type": "Employee",
+                    "attribs": [
+                        "firstName",
+                        "lastName",
+                        "salary"
+                    ]
+                }          
+            ]
+        }
+    ]
+}
+
+// Example 3 (projections, filters) for a deep query
+// projections on both Department and Employee objects.
+// filter on Employee objects (salary > 90000)
+
+{
+    "operationDetails": [
+        {
+            "opType": "projections",
+            "projectionsDetails": [
+                {
+                    "type": "Department",
+                    "attribs": [
+                        "name",
+                        "location"                     
+                    ]
+                },
+                {
+                    "type": "Employee",
+                    "attribs": [
+                        "firstName",
+                        "lastName",
+                        "salary"
+                    ]
+                },
+            ]
+        },
+
+        {
+            "opType": "filters",
+            "predicates": [
+                {
+                    "type": "Employee",
+                    "predicate": "salary > 90000"
+                }
+            ]
+        }
+    ]
+}

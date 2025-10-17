@@ -1,0 +1,31 @@
+A Department object (deptId = 101):
+----------------------------------
+{""deptId"":101,""name"":""HR"",""location"":""New York"",""budget"":500000.00}
+
+POST body for the above example:
+---------------------------------
+"{""entity"":{""deptId"":101,""name"":""HR"",""location"":""New York"",""budget"":500000.00}}"
+
+Curl command for the above example:
+-----------------------------------
+curl -X POST "http://localhost:80/gilhari/v1/Department"  -H "Content-Type: application/json"  -d "{""entity"":{""deptId"":101,""name"":""HR"",""location"":""New York"",""budget"":500000.00}}"
+
+Multiple Employee objects for Department (deptId = 101):
+--------------------------------------------------------
+[{""empId"":201,""firstName"":""John"",""lastName"":""Doe"",""salary"":70000.00,""deptId"":101},{""empId"":202,""firstName"":""Jane"",""lastName"":""Smith"",""salary"":75000.00,""deptId"":101},{""empId"":203,""firstName"":""Michael"",""lastName"":""Johnson"",""salary"":80000.00,""deptId"":101},{""empId"":204,""firstName"":""Sarah"",""lastName"":""Brown"",""salary"":72000.00,""deptId"":101}]
+
+POST body for the above example:
+---------------------------------
+"{""entity"":[{""empId"":201,""firstName"":""John"",""lastName"":""Doe"",""salary"":70000.00,""deptId"":101},{""empId"":202,""firstName"":""Jane"",""lastName"":""Smith"",""salary"":75000.00,""deptId"":101},{""empId"":203,""firstName"":""Michael"",""lastName"":""Johnson"",""salary"":80000.00,""deptId"":101},{""empId"":204,""firstName"":""Sarah"",""lastName"":""Brown"",""salary"":72000.00,""deptId"":101}]}"
+
+Curl command for the above example:
+-----------------------------------
+curl -X POST "http://localhost:80/gilhari/v1/Employee"  -H "Content-Type: application/json"  -d "{""entity"":[{""empId"":201,""firstName"":""John"",""lastName"":""Doe"",""salary"":70000.00,""deptId"":101},{""empId"":202,""firstName"":""Jane"",""lastName"":""Smith"",""salary"":75000.00,""deptId"":101},{""empId"":203,""firstName"":""Michael"",""lastName"":""Johnson"",""salary"":80000.00,""deptId"":101},{""empId"":204,""firstName"":""Sarah"",""lastName"":""Brown"",""salary"":72000.00,""deptId"":101}]}"
+
+
+For GET requet:
+---------------
+
+http://localhost:80/gilhari/v1/Department
+http://localhost:80/gilhari/v1/Department?deep=false
+http://localhost:80/gilhari/v1/Employee?filter=salary>75000.00

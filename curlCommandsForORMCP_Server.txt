@@ -1,0 +1,227 @@
+Below are the curl commands for each of the three departments (HR, IT, and Marketing). The curl commands will use the following variables, where:
+•	a* variables represent Department attributes.
+•	c* variables represent Employee attributes.
+
+Template Structure
+
+The general structure of the curl command will be as follows for each department:
+
+curl -X POST http://localhost:8080/ormcp-server-endpoint -H "Content-Type: application/json" -d ^
+{
+    "method": "insert",
+    "params": {
+        "className": "Department",
+        "jsonObjects": [
+            {
+                "deptId": aDeptId,
+                "name": "aName",
+                "location": "aLocation",
+                "budget": aBudget,
+                "employees": [
+                    {
+                        "empId": cEmpId1,
+                        "firstName": "cFirstName1",
+                        "lastName": "cLastName1",
+                        "salary": cSalary1,
+                        "deptId": aDeptId
+                    },
+                    {
+                        "empId": cEmpId2,
+                        "firstName": "cFirstName2",
+                        "lastName": "cLastName2",
+                        "salary": cSalary2,
+                        "deptId": aDeptId
+                    },
+                    ...
+                ]
+            }
+        ]
+    }
+}
+
+Now let’s fill in the specific details for each department.
+________________________________________
+1. HR Department
+
+curl -X POST http://localhost:8080/ormcp-server-endpoint -H "Content-Type: application/json" -d ^
+{
+    "method": "insert",
+    "params": {
+        "className": "Department",
+        "jsonObjects": [
+            {
+                "deptId": 101,
+                "name": "HR",
+                "location": "New York",
+                "budget": 500000.00,
+                "employees": [
+                    {
+                        "empId": 201,
+                        "firstName": "John",
+                        "lastName": "Doe",
+                        "salary": 70000.00,
+                        "deptId": 101
+                    },
+                    {
+                        "empId": 202,
+                        "firstName": "Jane",
+                        "lastName": "Smith",
+                        "salary": 75000.00,
+                        "deptId": 101
+                    },
+                    {
+                        "empId": 203,
+                        "firstName": "Michael",
+                        "lastName": "Johnson",
+                        "salary": 80000.00,
+                        "deptId": 101
+                    },
+                    {
+                        "empId": 204,
+                        "firstName": "Sarah",
+                        "lastName": "Brown",
+                        "salary": 72000.00,
+                        "deptId": 101
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+2. IT Department (8 Employees)
+
+curl -X POST http://localhost:8080/ormcp-server-endpoint -H "Content-Type: application/json" -d ^
+{
+    "method": "insert",
+    "params": {
+        "className": "Department",
+        "jsonObjects": [
+            {
+                "deptId": 102,
+                "name": "IT",
+                "location": "San Francisco",
+                "budget": 750000.00,
+                "employees": [
+                    {
+                        "empId": 301,
+                        "firstName": "Alice",
+                        "lastName": "Williams",
+                        "salary": 80000.00,
+                        "deptId": 102
+                    },
+                    {
+                        "empId": 302,
+                        "firstName": "Bob",
+                        "lastName": "Miller",
+                        "salary": 85000.00,
+                        "deptId": 102
+                    },
+                    {
+                        "empId": 303,
+                        "firstName": "Charlie",
+                        "lastName": "Wilson",
+                        "salary": 95000.00,
+                        "deptId": 102
+                    },
+                    {
+                        "empId": 304,
+                        "firstName": "David",
+                        "lastName": "Taylor",
+                        "salary": 90000.00,
+                        "deptId": 102
+                    },
+                    {
+                        "empId": 305,
+                        "firstName": "Eve",
+                        "lastName": "Moore",
+                        "salary": 92000.00,
+                        "deptId": 102
+                    },
+                    {
+                        "empId": 306,
+                        "firstName": "Grace",
+                        "lastName": "Anderson",
+                        "salary": 96000.00,
+                        "deptId": 102
+                    },
+                    {
+                        "empId": 307,
+                        "firstName": "Henry",
+                        "lastName": "Clark",
+                        "salary": 88000.00,
+                        "deptId": 102
+                    },
+                    {
+                        "empId": 308,
+                        "firstName": "Isabella",
+                        "lastName": "Lewis",
+                        "salary": 87000.00,
+                        "deptId": 102
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+3. Marketing Department
+curl -X POST http://localhost:8080/ormcp-server-endpoint -H "Content-Type: application/json" -d ^
+{
+    "method": "insert",
+    "params": {
+        "className": "Department",
+        "jsonObjects": [
+            {
+                "deptId": 103,
+                "name": "Marketing",
+                "location": "Chicago",
+                "budget": 600000.00,
+                "employees": [
+                    {
+                        "empId": 401,
+                        "firstName": "Nina",
+                        "lastName": "Green",
+                        "salary": 85000.00,
+                        "deptId": 103
+                    },
+                    {
+                        "empId": 402,
+                        "firstName": "Liam",
+                        "lastName": "Davis",
+                        "salary": 90000.00,
+                        "deptId": 103
+                    },
+                    {
+                        "empId": 403,
+                        "firstName": "Olivia",
+                        "lastName": "Lopez",
+                        "salary": 95000.00,
+                        "deptId": 103
+                    },
+                    {
+                        "empId": 404,
+                        "firstName": "Sophia",
+                        "lastName": "Garcia",
+                        "salary": 88000.00,
+                        "deptId": 103
+                    },
+                    {
+                        "empId": 405,
+                        "firstName": "Mason",
+                        "lastName": "Harris",
+                        "salary": 91000.00,
+                        "deptId": 103
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+Breakdown:
+•	Each department (HR, IT, and Marketing) has its own curl command.
+•	Department attributes (deptId, name, location, budget) are prefixed with a*.
+•	Employee attributes (empId, firstName, lastName, salary, deptId) are prefixed with c*.
+
+You can run these curl commands from a Windows Command Prompt or PowerShell terminal. Just make sure to replace http://localhost:8080/ormcp-server-endpoint with the correct URL for your server.

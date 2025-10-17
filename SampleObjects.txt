@@ -1,0 +1,162 @@
+{
+  "deptId": 101,
+  "name": "Sales",
+  "location": "New York",
+  "budget": 500000.00,
+  "employees": [
+    {
+      "empId": 201,
+      "firstName": "John",
+      "lastName": "Doe",
+      "salary": 55000.00,
+      "deptId": 101
+    },
+    {
+      "empId": 202,
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "salary": 62000.00,
+      "deptId": 101
+    },
+    {
+      "empId": 203,
+      "firstName": "Mark",
+      "lastName": "Johnson",
+      "salary": 48000.00,
+      "deptId": 101
+    },
+    {
+      "empId": 204,
+      "firstName": "Emily",
+      "lastName": "Davis",
+      "salary": 53000.00,
+      "deptId": 101
+    },
+    {
+      "empId": 205,
+      "firstName": "Paul",
+      "lastName": "Brown",
+      "salary": 60000.00,
+      "deptId": 101
+    }
+  ]
+}
+
+{
+  "deptId": 102,
+  "name": "IT",
+  "location": "San Francisco",
+  "budget": 750000.00,
+  "employees": [
+    {
+      "empId": 301,
+      "firstName": "Alice",
+      "lastName": "Williams",
+      "salary": 80000.00,
+      "deptId": 102
+    },
+    {
+      "empId": 302,
+      "firstName": "Bob",
+      "lastName": "Miller",
+      "salary": 85000.00,
+      "deptId": 102
+    },
+    {
+      "empId": 303,
+      "firstName": "Charlie",
+      "lastName": "Wilson",
+      "salary": 95000.00,
+      "deptId": 102
+    },
+    {
+      "empId": 304,
+      "firstName": "David",
+      "lastName": "Taylor",
+      "salary": 90000.00,
+      "deptId": 102
+    },
+    {
+      "empId": 305,
+      "firstName": "Eve",
+      "lastName": "Moore",
+      "salary": 92000.00,
+      "deptId": 102
+    },
+    {
+      "empId": 306,
+      "firstName": "Grace",
+      "lastName": "Anderson",
+      "salary": 96000.00,
+      "deptId": 102
+    },
+    {
+      "empId": 307,
+      "firstName": "Henry",
+      "lastName": "Clark",
+      "salary": 88000.00,
+      "deptId": 102
+    },
+    {
+      "empId": 308,
+      "firstName": "Isabella",
+      "lastName": "Lewis",
+      "salary": 87000.00,
+      "deptId": 102
+    }
+  ]
+}
+
+
+{
+  "deptId": 103,
+  "name": "Marketing",
+  "location": "Los Angeles",
+  "budget": 350000.00,
+  "employees": [
+    {
+      "empId": 401,
+      "firstName": "Sophia",
+      "lastName": "Martinez",
+      "salary": 67000.00,
+      "deptId": 103
+    },
+    {
+      "empId": 402,
+      "firstName": "Liam",
+      "lastName": "Garcia",
+      "salary": 71000.00,
+      "deptId": 103
+    },
+    {
+      "empId": 403,
+      "firstName": "Olivia",
+      "lastName": "Rodriguez",
+      "salary": 63000.00,
+      "deptId": 103
+    },
+    {
+      "empId": 404,
+      "firstName": "Ethan",
+      "lastName": "Hernandez",
+      "salary": 64000.00,
+      "deptId": 103
+    },
+    {
+      "empId": 405,
+      "firstName": "Ava",
+      "lastName": "Lopez",
+      "salary": 60000.00,
+      "deptId": 103
+    },
+    {
+      "empId": 406,
+      "firstName": "Mason",
+      "lastName": "Gonzalez",
+      "salary": 66000.00,
+      "deptId": 103
+    }
+  ]
+}
+
+

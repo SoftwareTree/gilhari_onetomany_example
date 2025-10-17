@@ -1,0 +1,46 @@
+JDX_DATABASE JDX:jdbc:sqlite:./config/json_onetomany_example.db;USER=sa;PASSWORD=sa;JDX_DBTYPE=SQLITE;DEBUG_LEVEL=5;
+JDBC_DRIVER org.sqlite.JDBC
+
+// Please see JDX_DATABASE_JDBC_DRIVER_Specification_Guide (.md or .html) file for 
+// a guide to use different databases (e.g., Postgres or MySQL) in the mapping file.
+
+OBJECT_MODEL_OVERVIEW This object model describes a one-to-many relationship between Department and Employee. It is a BYREFERENCE relationship - Employees and Departments can be added separately; an Employee is not deleted if its Department is deleted.
+
+JDX_OBJECT_MODEL_PACKAGE com.softwaretree.onetomany.model
+;
+REM ************************************************************************
+
+CLASS .Department TABLE DEPT
+ 
+   // First declare all the persistent JSON properties using VIRTUAL_ATTRIB specifications
+   VIRTUAL_ATTRIB deptId ATTRIB_TYPE int
+   VIRTUAL_ATTRIB name ATTRIB_TYPE java.lang.String
+   VIRTUAL_ATTRIB location ATTRIB_TYPE java.lang.String
+   VIRTUAL_ATTRIB budget ATTRIB_TYPE double
+
+   // Now provide the rest of the mapping specification for this class
+   PRIMARY_KEY deptId 
+   RELATIONSHIP employees REFERENCES ArrayEmployees WITH deptId
+;
+
+CLASS .Employee TABLE EMP
+
+   // First declare all the persistent JSON properties using VIRTUAL_ATTRIB specifications
+   VIRTUAL_ATTRIB empId ATTRIB_TYPE int
+   VIRTUAL_ATTRIB firstName ATTRIB_TYPE java.lang.String
+   VIRTUAL_ATTRIB lastName ATTRIB_TYPE java.lang.String
+   VIRTUAL_ATTRIB salary ATTRIB_TYPE double
+   VIRTUAL_ATTRIB deptId ATTRIB_TYPE int 
+   
+   // Now provide the rest of the mapping specification for this class
+   PRIMARY_KEY empId 
+;
+
+COLLECTION_CLASS ArrayEmployees COLLECTION_TYPE ARRAY ELEMENT_CLASS .Employee
+    PRIMARY_KEY deptId 
+;
+
+
+
+
+
