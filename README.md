@@ -376,7 +376,7 @@ curl -X GET "http://localhost:80/gilhari/v1/health/check"
 
 2. **curlCommandsPopulate.cmd / .sh** - Comprehensive data population script
 
-   Populates sample data with:
+   - Populates sample data with:
    - Multiple departments (HR, IT, Marketing)
    - Multiple employees per department
    - Demonstrates shallow queries (`deep=false`)
