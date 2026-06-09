@@ -98,7 +98,7 @@ gilhari_onetomany_example/
 │   └── com/softwaretree/...      # Department.java, Employee.java
 ├── config/                        # Configuration files
 │   ├── gilhari_onetomany_example.jdx  # ORM specification with one-to-many relationships
-│   └── classnames_map_example.js
+│   └── classnames_map_example.json
 ├── bin/                           # Compiled .class files
 ├── Dockerfile                     # Docker image definition
 ├── gilhari_service.config         # Service configuration
@@ -187,7 +187,7 @@ The `gilhari_service.config` file specifies runtime parameters for the RESTful G
   "jdx_debug_level": 3,
   "jdx_force_create_schema": "true",
   "jdx_persistent_classes_location": "./bin",
-  "classnames_map_file": "config/classnames_map_example.js",
+  "classnames_map_file": "config/classnames_map_example.json",
   "gilhari_rest_server_port": 8081
 }
 ```
