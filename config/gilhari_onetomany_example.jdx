@@ -1,8 +1,9 @@
 JDX_DATABASE JDX:jdbc:sqlite:./config/json_onetomany_example.db;USER=sa;PASSWORD=sa;JDX_DBTYPE=SQLITE;DEBUG_LEVEL=5;
 JDBC_DRIVER org.sqlite.JDBC
 
-// Please see JDX_DATABASE_JDBC_DRIVER_Specification_Guide (.md or .html) file for 
-// a guide to use different databases (e.g., Postgres or MySQL) in the mapping file.
+// Please see the JDX_DATABASE and JDBC_DRIVER Specification Guide
+// (https://github.com/SoftwareTree/jdx-docs/blob/main/guides/JDX_DATABASE_JDBC_DRIVER_Specification_Guide.md)
+// for a guide to use different databases (e.g., Postgres or MySQL) in the mapping file.
 
 OBJECT_MODEL_OVERVIEW This object model describes a one-to-many relationship between Department and Employee. It is a BYREFERENCE relationship - Employees and Departments can be added separately; an Employee is not deleted if its Department is deleted.
 
